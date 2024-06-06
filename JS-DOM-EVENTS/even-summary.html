@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evensummary</title>
+</head>
+<body>
+    
+<h1>Final DOM Evet Handlers</h1>
+<h3 id="handler-status">Default Text</h3>
+<p id="input-display">Default Input text</p>
+<input id="input-field" type="text">
+<button id="btn-update">Update</button>
+<br>
+<br>
+<button onclick="handleOnClick()">Handel Event by Add onclick Function</button>
+<button id="even-lisener">Handle event by addEventLisner</button>
+<script>
+
+    function handleOnClick() {
+        const handlerStatus = document.getElementById('handler-status');
+        handlerStatus.innerText = 'Handled by function attached on clicked attribute';
+    }
+
+    // option: 2
+
+    document.getElementById('even-lisener').addEventListener('click', function(){
+    const handlerStatus = document.getElementById('handler-status');
+    handlerStatus.innerText = 'Text is updated for this ression';
+    })
+ 
+    // option 2: recap 
+    document.getElementById('btn-update').addEventListener('click', function(){
+      const inputField = document.getElementById('input-field');
+      const inputText = inputField.value;
+     
+      const p = document.getElementById('input-display');
+      p.innerText = inputText;
+    })
+
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
